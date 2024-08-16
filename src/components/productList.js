@@ -32,12 +32,12 @@ function ProductList({ addToCart }) {
   }, []);
 
   return (
-    <div>
+    <div className='w-11/12 mx-auto sm:text-xs md:text-md lg:text-lg xl:text-xl   md:m-3 lg:m-4 xl:m-5'>
       <h2 className='text-2xl font-bold m-4 '>Products</h2>
       <ToastContainer />
-      <div className="product-list">
+      <div className="product-list sm:flex-col md:flex-row lg:flex-row xl:flex-row">
         {products.map(product => (
-          <Card key={product.id}>
+          <Card className="product-list-card" key={product.id}>
 
             <div className='flex flex-col items-center justify-center'>
               <img className='size-1/2 m-4 p-auto object-contain hover:scale-105 transition-transform duration-300' src={product.image} alt={product.title} style={{ objectFit: 'contain' }} />

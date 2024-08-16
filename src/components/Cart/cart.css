@@ -1,0 +1,5 @@
+@media (min-width: 340px) and (max-width: 800px) {
+    .cart {
+        width: 90%;
+    }
+}

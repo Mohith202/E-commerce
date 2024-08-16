@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './cart.css';
+
+
 
 function Cart({ cartItems, removeFromCart, setCartItems }) {
   const [subtotal, setSubtotal] = useState(0);
@@ -60,7 +63,7 @@ if (cartItems.length === 0) {
       
         {cartItems.map((product, index) => (
 
-          <div className='w-1/2 m-4 p-4 border-4 border-black-600 rounded-md border-solid  mx-auto flex flex-row text-base cartcard' key={product.id}>
+          <div className=' cart w-1/2 m-4 p-4 border-4 border-black-600 rounded-md border-solid  mx-auto flex flex-row text-base cartcard' key={product.id}>
             <img className='size-1/4 border-2 border-black rounded-md border-solid hover:scale-105 transition-transform duration-300' src={product.image} alt={product.title} style={{ objectFit: 'contain' }} />
             <div className='flex flex-col justify-around items-start align-middle w-3/4'>
               <h4 className='text-lg font-bold m-3'>{product.title}</h4>
@@ -87,7 +90,7 @@ if (cartItems.length === 0) {
           <div className='flex flex-col justify-center items-center'>
             <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' >Buy Now
             </button>
-            <h2 className='text-2xl font-bold m-4'>Subtotal:${subtotal.toFixed(2)}</h2>
+            <h2 className='text-2xl font-bold m-4'>Total: ${subtotal.toFixed(2)}</h2>
           </div>
         
       

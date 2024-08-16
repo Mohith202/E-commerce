@@ -1,0 +1,19 @@
+@media (min-width: 140px) and (max-width: 800px) {
+    .Navbar-small-container {
+        display: none;
+    }
+    .search-bar {
+
+        display:none;
+    }
+    .small-container {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+}
+
+.small-container {
+    display: none;
+}
